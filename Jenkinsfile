@@ -1,5 +1,9 @@
-pipeline {
+  pipeline {
     agent any
+      environment {
+        NEXUS_CREDS = credentials('NexusArtifactoryLogin')
+        NEXUS_USER = "admin"
+        NEXUS_PASSWORD = "admin"
     tools {
         maven 'maven3'
     }
@@ -13,28 +17,13 @@ pipeline {
                  archiveArtifacts artifacts: 'target/*.war', onlyIfSuccessful: true
             }
         }
-        stage('Upload War To Nexus'){
-            steps{
-                script{
-
-                    def mavenPom = 'pom.xml'
-                    
-                    nexusArtifactUploader artifacts: [
-                        [
-                            artifactId: 'simple-app', 
-                            classifier: '', 
-                            file: "target/simple-app-3.0.0-SNAPSHOT.war", 
-                            type: 'war'
-                        ]
-                    ], 
-                    credentialsId: 'nexus3', 
-                    groupId: 'in.javahome', 
-                    nexusUrl: '172.31.33.97:8081', 
-                    nexusVersion: 'nexus3', 
-                    protocol: 'http', 
-                    repository: 'simplleapp-release', 
-                    version: '3.0.0'
+        stages {
+            stage('Nexus Deploy') {
+                steps {
+                    configFileProvider([configFile(fileId: 'maven-settings', variable: 'MAVEN_GLOBAL_SETTINGS')]) {
+                        sh 'mvn -gs $MAVEN_GLOBAL_SETTINGS deploy'
                     }
+                }
             }
         }
     }
