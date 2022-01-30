@@ -10,11 +10,4 @@ pipeline {
             }
         }    
     }
-    stage('Nexus Deploy') {
-        steps {
-            configFileProvider([configFile(fileId: 'maven-settings', variable: 'MAVEN_GLOBAL_SETTINGS')]) {
-                sh 'mvn -gs $MAVEN_GLOBAL_SETTINGS deploy'
-            }
-        }
-    }
 }
