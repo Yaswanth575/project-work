@@ -15,7 +15,7 @@
                 script{
                     configFileProvider(
                         [configFile(fileId: 'maven-settings', variable: 'MAVEN_GLOBAL_SETTINGS')]) {
-                        sh 'mvn -s $MAVEN_GLOBAL_SETTINGS deploy'
+                     sh 'mvn -s ${MAVEN_GLOBAL_SETTINGS} deploy'
                 }
                     
             }
