@@ -19,15 +19,15 @@
 	</dependencies>
 	<distributionManagement>
 		<repository>
-		   <id>My_Artifactory_Releases</id>
-		   <name>My_Artifactory-releases</name>
-		   <url>http://my.maven.repository.internal/artifactory/release</url>
+		   <id>nexus3</id>
+		   <name>simplleapp-release</name>
+		   <url>http://http://35.177.46.53:8081/repository/simplleapp-release</url>
 	    </repository>
 
 		<snapshotRepository>
-			<id>My_Artifactory_Snapshots</id>
-			<name>My_Artifactory-snapshots</name>
-			<url>http://my.maven.repository.internal/artifactory/snapshot</url>
+			<id>nexus3</id>
+			<name>simplleapp-release</name>
+			<url>http://35.177.46.53:8081/repository/simplleapp-release</url>
 		</snapshotRepository>
 
 	</distributionManagement>
