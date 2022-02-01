@@ -27,7 +27,7 @@
 		<snapshotRepository>
 			<id>nexus3</id>
 			<name>simplleapp-release</name>
-			<url>http://13.40.190.224:8081/repository/simplleapp-release</url>
+			<url>http://13.40.190.224:8081/repository/simplleapp-snapshot</url>
 		</snapshotRepository>
 
 	</distributionManagement>
