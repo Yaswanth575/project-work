@@ -25,7 +25,7 @@
 	    </repository>
 
 		<snapshotRepository>
-			<id>nexus2</id>
+			<id>nexus3</id>
 			<name>simplleapp-release</name>
 			<url>http://18.169.51.138:8081/repository/simplleapp-release</url>
 		</snapshotRepository>
