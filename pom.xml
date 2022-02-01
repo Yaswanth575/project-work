@@ -9,8 +9,6 @@
 	<url>http://maven.apache.org</url>
 	
 	<dependencies>
-
-		
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -20,17 +18,17 @@
 
 	</dependencies>
 	<distributionManagement>
-           <repository>
-               <id>My_Artifactory_Releases</id>
-               <name>My_Artifactory-releases</name>
-               <url>http://my.maven.repository.internal/artifactory/release</url>
-    	   </repository>
-    
-    <snapshotRepository>
-        <id>My_Artifactory_Snapshots</id>
-        <name>My_Artifactory-snapshots</name>
-        <url>http://my.maven.repository.internal/artifactory/snapshot</url>
-    </snapshotRepository>
+		<repository>
+		   <id>My_Artifactory_Releases</id>
+		   <name>My_Artifactory-releases</name>
+		   <url>http://my.maven.repository.internal/artifactory/release</url>
+	    </repository>
 
-</distributionManagement>
+		<snapshotRepository>
+			<id>My_Artifactory_Snapshots</id>
+			<name>My_Artifactory-snapshots</name>
+			<url>http://my.maven.repository.internal/artifactory/snapshot</url>
+		</snapshotRepository>
+
+	</distributionManagement>
 </project>
