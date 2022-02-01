@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>in.javahome</groupId>
-	<artifactId>simplleapp-release</artifactId>
+	<artifactId>simple-app</artifactId>
 	<packaging>war</packaging>
 	<version>3.0.0-SNAPSHOT</version>
 	<name>simple-app</name>
@@ -18,12 +18,11 @@
 
 	</dependencies>
 	<distributionManagement>
-
-		<snapshotRepository>
-			<id>nexus3</id>
-			<name>simplleapp-release</name>
-			<url>http://18.169.51.138:8081/repository/simplleapp-release</url>
-		</snapshotRepository>
+		<repository>
+		   <id>nexus3</id>
+		   <name>simplleapp-release</name>
+		   <url>http://http://18.169.51.138:8081/repository/simplleapp-release</url>
+	    	</repository>
 
 	</distributionManagement>
 </project>
