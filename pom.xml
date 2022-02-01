@@ -18,11 +18,6 @@
 
 	</dependencies>
 	<distributionManagement>
-		<repository>
-		   <id>nexus3</id>
-		   <name>simplleapp-release</name>
-		   <url>http://http://18.169.51.138:8081/repository/simplleapp-release</url>
-	    </repository>
 
 		<snapshotRepository>
 			<id>nexus3</id>
